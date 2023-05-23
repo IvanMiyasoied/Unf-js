@@ -59,3 +59,45 @@
 
 
 
+const object = {
+    young: [
+      { name: "Misha", age: 20 },
+      { name: "Olha", age: 26 },
+      { name: "Ira", age: 22 },
+      { name: "Ivan", age: 21 },
+    ],
+    adult: {
+      more30: [
+        { name: "Evgen", age: 40 },
+        { name: "Marina", age: 36 },
+        { name: "Oleh", age: 31 },
+        { name: "Ivan", age: 36 },
+      ],
+      more40: [
+        { name: "Sergey", age: 42 },
+        { name: "Inga", age: 46 },
+        { name: "Ira", age: 41 },
+        { name: "Igor", age: 46 },
+      ],
+    },
+    old: {
+      more60: [
+        { name: "Stepan", age: 67 },
+        { name: "Victor", age: 61 },
+      ],
+    },
+  };
+
+  
+  
+  function getAveregeOrAll (object,value,maxAge) {
+      let arr = []
+      for (i=0; i<object.young.length;i++) {
+        arr.push(object.young[i].age)
+      }
+      return arr
+
+  }
+
+  getAveregeOrAll(object);
+  console.log(getAveregeOrAll(object));
