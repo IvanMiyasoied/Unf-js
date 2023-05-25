@@ -88,16 +88,45 @@ const object = {
     },
   };
 
-  
+   let maxAge = 100;
+   
+   let result = getAveregeOrAll(object);
   
   function getAveregeOrAll (object,value,maxAge) {
-      let arr = []
-      for (i=0; i<object.young.length;i++) {
+    let arr = []
+      for (i=0; i<object.young.length;i++) {  
         arr.push(object.young[i].age)
       }
-      return arr
+      for (i=0; i<object.adult.more30.length;i++) {
+        arr.push(object.adult.more30[i].age)
+      }
+      for (i=0; i<object.adult.more40.length;i++) {
+        arr.push(object.adult.more40[i].age)
+      }
+      for (i=0; i<object.old.more60.length;i++) {
+        arr.push(object.old.more60[i].age)
+      }
+      
+       value = arr.reduce((acc,current) => acc + current,0)/arr.length + " " + "avg age" + " " + arr.length + " " + "num of cands"
 
+      return  arr,value
   }
 
+  
+
+  let checkAge = (result) => {
+    for (i = 0; i < result.length;i++) {
+      if(result[i] >= maxAge) {
+        console.log("too old");
+      }
+      
+    };
+
+  }
+ 
+  checkAge(result);
   getAveregeOrAll(object);
+  
+  
+  console.log(result);
   console.log(getAveregeOrAll(object));
