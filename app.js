@@ -150,8 +150,19 @@
 //  console.log(gcd(12,8));
 
 
-let currDate = () => window.Date;
+// let currDate = new Date ()
 
-currDate();
+// console.log(currDate);
 
-console.log(currDate);
+
+
+// let navigatorObj = window.navigator;
+
+// console.log(navigatorObj);
+
+// localStorage.setItem('test',1);
+
+// console.log(localStorage.getItem('test'));
+
+
+// const xhr = new XMLHttpRequest ();
